@@ -1,0 +1,45 @@
+[
+  {
+    "name": "a",
+    "tokenType": "x",
+    "height": "1",
+    "id": 1
+  },
+  {
+    "name": "a",
+    "tokenType": "x1",
+    "height": "4",
+    "id": 1
+  },
+  {
+    "name": "a",
+    "tokenType": "x2",
+    "height": "5",
+    "id": 1
+  },
+  {
+    "name": "b",
+    "tokenType": "y",
+    "height": "2",
+    "id": 2
+  },
+  {
+    "name": "c",
+    "tokenType": "z",
+    "height": "3",
+    "id": 3
+  }
+]
+
+// let results = response.data;
+//  if(name) {
+//     results = results.filter(item => item.name === 'name');
+//  }
+
+//  if(tokenType) {
+//     results = results.filter(item => item.name === 'tokenType');
+//  }
+
+//  if(height) {
+//     results = results.filter(item => item.name === 'height');
+//  }
