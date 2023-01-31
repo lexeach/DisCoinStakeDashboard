@@ -331,7 +331,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Token Balance</h5>
+              <h5>DIS Balance</h5>
               <h4 className="mb-0">{tokenBalance ? tokenBalance : 0} (TRCT)</h4>
             </div>
           </div>
@@ -341,7 +341,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Metamask Balance</h5>
+              <h5>BNB Balance</h5>
 
               <h4 className="mb-0">{balance ? balance : 0}</h4>
             </div>
@@ -351,7 +351,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Withdrwa able ROI</h5>
+              <h5>Withdrawable ROI</h5>
               <h4 className="mb-0">
                 {registration_Free ? registration_Free : 0} (USDT)
               </h4>
@@ -363,7 +363,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Token Price</h5>
+              <h5>DIS Price</h5>
               <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
             </div>
           </div>
@@ -373,7 +373,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>is Exist</h5>
+              <h5>User Exist</h5>
               <h4 className="mb-0">{users_isExist ? "Yes" : "No"}</h4>
             </div>
           </div>
@@ -383,7 +383,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>ID</h5>
+              <h5>User ID</h5>
               <h4 className="mb-0">{users_id ? users_id : 0}</h4>
             </div>
           </div>
@@ -392,7 +392,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Refferrer ID</h5>
+              <h5>My Sponsor</h5>
               <h4 className="mb-0">
                 {users_referrerID ? users_referrerID : 0}
               </h4>
@@ -404,7 +404,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Reffered User</h5>
+              <h5>Direct User</h5>
               <h4 className="mb-0">
                 {users_referredUsers ? users_referredUsers : 0}
               </h4>
@@ -426,7 +426,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>StakedToken</h5>
+              <h5>Staked DIS</h5>
               <h4 className="mb-0">
                 {users_stakedToken ? users_stakedToken : 0}
               </h4>
@@ -438,7 +438,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Transferable Token</h5>
+              <h5>Transferable DIS</h5>
               <h4 className="mb-0">
                 {(function () {
                   let transferabletoken = tokenBalance - users_stakedToken;
@@ -462,7 +462,7 @@ const Dashboard = () => {
         {/* copy link  */}
         <div className="col-12 text-center">
           <button className={`ref-btn`} onClick={copyToClipBoard}>
-            Click here to copy your Refral link
+            Click here to copy your Referral link
           </button>
           {copySuccess === true ? (
             <span className="ref-btn-success">✓ copied.</span>
@@ -473,14 +473,14 @@ const Dashboard = () => {
 
         <div className="col-sm-12 grid-margin">
           <div className="card">
-            <div className="card-body text-center">User</div>
+            <div className="card-body text-center">DIS address 0x963d740615F6526d655d2Fd1e38ee8934e4fC22F</div>
           </div>
         </div>
         {/* Registration function  */}
         <div className="col-sm-12 col-md-6 col-lg-6 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Referrel ID</h5>
+              <h5>Registration</h5>
               <div className="row">
                 <div className="col-sm-12 my-auto">
                   <form className="forms-sample" onSubmit={handleSubmit}>
