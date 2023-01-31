@@ -96,7 +96,7 @@ const Dashboard = () => {
     async function load() {
       const accounts = await web3.eth.requestAccounts();
       if (!accounts) {
-        alert("please open in dApp browser");
+        alert("please install metamask");
       }
       let balance = await web3.eth.getBalance(accounts[0]);
       const etherValue = web3.utils.fromWei(balance, "ether");
@@ -146,6 +146,7 @@ const Dashboard = () => {
     console.log("the referrerID", referrerID);
     let { id, amount } = referrerID;
     amount = amount * 100000000000000000;
+
     let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
     // let value_ = await ICU_.methods.REGESTRATION_FESS().call();
     let currentTokenAccepting = await ICU_.methods
@@ -301,7 +302,7 @@ const Dashboard = () => {
   async function userAccount() {
     const accounts = await web3.eth.requestAccounts();
     if (!accounts) {
-      alert("please open in dApp browser");
+      alert("please install metamask");
     }
     setUserAc(accounts[0]);
   }
@@ -323,18 +324,21 @@ const Dashboard = () => {
   return (
     <div className="home-container">
       <div className="row">
+        {/* token balance  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>DIS Balance</h5>
-              <h4 className="mb-0">{tokenBalance ? tokenBalance : 0} (DIS)</h4>
+              <h5>Token Balance</h5>
+              <h4 className="mb-0">{tokenBalance ? tokenBalance : 0} (TRCT)</h4>
             </div>
           </div>
         </div>
+
+        {/* metamask balance  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>BNB Balance</h5>
+              <h5>Metamask Balance</h5>
 
               <h4 className="mb-0">{balance ? balance : 0}</h4>
             </div>
@@ -344,31 +348,34 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Withdrawable ROI</h5>
+              <h5>Withdrwa able ROI</h5>
               <h4 className="mb-0">
                 {registration_Free ? registration_Free : 0} (USDT)
               </h4>
             </div>
           </div>
         </div>
+
         {/* token price  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>DIS Price</h5>
+              <h5>Token Price</h5>
               <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
             </div>
           </div>
         </div>
+
         {/* is exist  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>User Exist</h5>
+              <h5>is Exist</h5>
               <h4 className="mb-0">{users_isExist ? "Yes" : "No"}</h4>
             </div>
           </div>
         </div>
+
         {/* id  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
@@ -382,23 +389,27 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>My Sponsor</h5>
+              <h5>Refferrer ID</h5>
               <h4 className="mb-0">
                 {users_referrerID ? users_referrerID : 0}
               </h4>
             </div>
           </div>
         </div>
+
+        {/* reffered user  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>My Direct</h5>
+              <h5>Reffered User</h5>
               <h4 className="mb-0">
                 {users_referredUsers ? users_referredUsers : 0}
               </h4>
             </div>
           </div>
         </div>
+
+        {/* income  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
@@ -407,6 +418,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+
+        {/* stack token  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
@@ -417,6 +430,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+
+        {/* transferable token  */}
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
@@ -430,6 +445,8 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+
+        {/* withdrawable roi button  */}
         <div className="col-lg-4 col-md-4 col-sm-12 grid-margin">
           <div className="card h80">
             <div className="card-body">
@@ -460,7 +477,7 @@ const Dashboard = () => {
         <div className="col-sm-12 col-md-6 col-lg-6 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Registration</h5>
+              <h5>Referrel ID</h5>
               <div className="row">
                 <div className="col-sm-12 my-auto">
                   <form className="forms-sample" onSubmit={handleSubmit}>
