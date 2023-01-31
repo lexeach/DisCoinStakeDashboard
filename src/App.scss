@@ -39,7 +39,14 @@
 }
 .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
   button {
-    color: #f4ad23 !important;
+    &:first-child {
+      color: #f4ad23 !important;
+    }
+    &:last-child {
+      color: #2f2f2f !important;
+      border: 2px solid #ffffff;
+      background-color: #f4ad23;
+    }
   }
 }
 
@@ -110,8 +117,12 @@ a {
 }
 
 .ref-btn {
-  color: #f4ad23;
-  background-color: #2f2f2f;
+  // color: #f4ad23;
+  // background-color: #2f2f2f;
+
+  color: #2f2f2f !important;
+  border: 2px solid #ffffff;
+  background-color: #f4ad23;
   border: none;
   padding: 12px 25px;
   border-radius: 36px;
@@ -126,13 +137,29 @@ a {
 }
 
 .submitbtn_ {
-  color: #f4ad23;
-  border: 2px solid #f4ad23;
+  // color: #f4ad23;
+  color: #2f2f2f !important;
+  border: 2px solid #ffffff;
+  background-color: #f4ad23;
   border-radius: 22px;
   &:hover {
-    color: #f4ad23;
-    border: 2px solid #f4ad23;
+    color: #2f2f2f !important;
+    border: 2px solid #ffffff;
+    background-color: #f4ad23;
   }
+}
+
+.withdrwaroi {
+  // background-color: transparent;
+  // border: 2px solid #f4ad23;
+  // color: #f4ad23;
+
+  color: #2f2f2f !important;
+  border: 2px solid #ffffff;
+  background-color: #f4ad23;
+
+  border-radius: 60px;
+  padding: 10px 22px;
 }
 
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
@@ -148,25 +175,32 @@ a {
   border-radius: "20px;" !important;
 }
 
-.withdrwaroi {
-  background-color: transparent;
-  border: 2px solid #f4ad23;
-  color: #f4ad23;
-  border-radius: 60px;
-  padding: 10px 22px;
-}
-
 .h80 {
   height: 80%;
+}
+.css-1bh4fj9 {
+  color: #f4ad23 !important;
 }
 
 nav {
   background-color: #2f2f2f !important;
-  color: #f4ad23 !important;
-  .css-144j1un {
-    color: #f4ad23 !important;
-  }
+  // color: #f4ad23 !important;
+  // .css-144j1un {
+  //   // color: #f4ad23 !important;
+  // }
   button {
-    color: #f4ad23 !important;
+    // color: #f4ad23 !important;
+
+    // border-radius: 22px;
+    // &:hover {
+    //   color: #2f2f2f !important;
+    //   border: 2px solid #ffffff;
+    //   background-color: #f4ad23;
+    // }
   }
+}
+.css-144j1un {
+  color: #2f2f2f !important;
+  border: 2px solid #ffffff !important;
+  background-color: #f4ad23 !important;
 }
