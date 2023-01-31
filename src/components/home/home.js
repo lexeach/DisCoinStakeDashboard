@@ -343,7 +343,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Withdrwa able ROI</h5>
+              <h5>Withdrawable ROI</h5>
               <h4 className="mb-0">
                 {registration_Free ? registration_Free : 0} (USDT)
               </h4>
@@ -354,7 +354,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Token Price</h5>
+              <h5>DIS Price</h5>
               <h4 className="mb-0">{tokenPrice ? tokenPrice : 0} (USDT)</h4>
             </div>
           </div>
