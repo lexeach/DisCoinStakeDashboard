@@ -145,7 +145,8 @@ const Dashboard = () => {
     event.preventDefault();
     console.log("the referrerID", referrerID);
     let { id, amount } = referrerID;
-    amount = amount * 100000000000000000;
+
+    amount = web3.utils.toWei(amount, "ether");
 
     let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
     // let value_ = await ICU_.methods.REGESTRATION_FESS().call();
@@ -201,7 +202,9 @@ const Dashboard = () => {
     event.preventDefault();
 
     let { amount } = topupVal;
-    amount = amount * 100000000000000000;
+    // amount = amount * 1000000000000000000;
+    // amount = amount * 1000000000000000000;
+    amount = web3.utils.toWei(amount, "ether");
 
     let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
     // let value_ = await ICU_.methods.REGESTRATION_FESS().call();
