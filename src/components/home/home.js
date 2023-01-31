@@ -96,7 +96,7 @@ const Dashboard = () => {
     async function load() {
       const accounts = await web3.eth.requestAccounts();
       if (!accounts) {
-        alert("please install metamask");
+        alert("please open in dApp browser");
       }
       let balance = await web3.eth.getBalance(accounts[0]);
       const etherValue = web3.utils.fromWei(balance, "ether");
@@ -300,7 +300,7 @@ const Dashboard = () => {
   async function userAccount() {
     const accounts = await web3.eth.requestAccounts();
     if (!accounts) {
-      alert("please install metamask");
+      alert("please open in dApp browser");
     }
     setUserAc(accounts[0]);
   }
