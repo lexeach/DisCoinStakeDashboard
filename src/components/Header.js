@@ -56,7 +56,7 @@ function DrawerAppBar(props) {
       </List>
 
       <List>
-        <a onClick={() => openInNewTab("https://google.com")}>
+        <a onClick={() => openInNewTab("https://main.d2ifd704pk8z9d.amplifyapp.com/")}>
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary="SWAP" />
