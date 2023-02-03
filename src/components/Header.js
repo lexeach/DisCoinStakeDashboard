@@ -14,7 +14,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.jpeg";
 import Web3 from "web3";
 
 const drawerWidth = 240;
@@ -56,7 +56,7 @@ function DrawerAppBar(props) {
       </List>
 
       <List>
-        <a onClick={() => openInNewTab("https://main.d2ifd704pk8z9d.amplifyapp.com/")}>
+        <a onClick={() => openInNewTab("https://google.com")}>
           <ListItem disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary="SWAP" />
@@ -71,7 +71,7 @@ function DrawerAppBar(props) {
   const { ethereum } = window;
 
   if (!ethereum) {
-    alert("Please open in dApp browser");
+    alert("Please Install MetaMask");
     window.location.reload();
   }
 
@@ -84,7 +84,7 @@ function DrawerAppBar(props) {
   }, []);
 
   const openInNewTab = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(url, "_self");
   };
 
   return (
@@ -115,7 +115,7 @@ function DrawerAppBar(props) {
               {account}
             </Button>
             <Button
-              onClick={() => openInNewTab("https://main.d2ifd704pk8z9d.amplifyapp.com/")}
+              onClick={() => openInNewTab("https://google.com")}
               sx={{
                 border: "2px #f4ad23 solid",
                 color: "#2f2f2f !important",
