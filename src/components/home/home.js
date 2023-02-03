@@ -14,7 +14,7 @@ const Dashboard = () => {
   const [balance, setBalance] = useState();
   const [registration_Free, setRegistrationFee] = useState();
   const [tokenBalance, setTokenBalance] = useState();
-  const [referrerID, setReferrerID] = useState({ id: "88194", amount: "" });
+  const [referrerID, setReferrerID] = useState({ id: "", amount: "" });
   const [topupVal, setTopupVal] = useState({ amount: "" });
 
   // set it latter
@@ -147,7 +147,7 @@ const Dashboard = () => {
     let { id, amount } = referrerID;
 
     amount = web3.utils.toWei(amount, "ether");
-    console.log("id", id, "amount", amount);
+
     let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
     // let value_ = await ICU_.methods.REGESTRATION_FESS().call();
     let currentTokenAccepting = await ICU_.methods
@@ -353,7 +353,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5>Withdrawable ROI</h5>
               <h4 className="mb-0">
-                {registration_Free ? registration_Free : 0} (USDT)
+                {registration_Free ? registration_Free : 0}
               </h4>
             </div>
           </div>
@@ -392,7 +392,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Sponsor</h5>
+              <h5>My Sponsor</h5>
               <h4 className="mb-0">
                 {users_referrerID ? users_referrerID : 0}
               </h4>
@@ -404,7 +404,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Direct</h5>
+              <h5>Direct User</h5>
               <h4 className="mb-0">
                 {users_referredUsers ? users_referredUsers : 0}
               </h4>
@@ -438,7 +438,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Transferable Token</h5>
+              <h5>Transferable DIS</h5>
               <h4 className="mb-0">
                 {(function () {
                   let transferabletoken = tokenBalance - users_stakedToken;
@@ -473,7 +473,7 @@ const Dashboard = () => {
 
         <div className="col-sm-12 grid-margin">
           <div className="card">
-            <div className="card-body text-center">DIS address 0xf250a59723cfb438645772203BA262E52DE5Cd13</div>
+            <div className="card-body text-center">DIS address 0x963d740615F6526d655d2Fd1e38ee8934e4fC22F</div>
           </div>
         </div>
         {/* Registration function  */}
