@@ -332,7 +332,7 @@ const Dashboard = () => {
           <div className="card">
             <div className="card-body">
               <h5>DIS Balance</h5>
-              <h4 className="mb-0">{tokenBalance ? tokenBalance : 0} (TRCT)</h4>
+              <h4 className="mb-0">{tokenBalance ? tokenBalance : 0} (DIS)</h4>
             </div>
           </div>
         </div>
