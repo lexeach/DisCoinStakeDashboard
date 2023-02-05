@@ -14,9 +14,9 @@ const Dashboard = () => {
   const [balance, setBalance] = useState();
   const [registration_Free, setRegistrationFee] = useState();
   const [tokenBalance, setTokenBalance] = useState();
-  const [referrerID, setReferrerID] = useState({ id: "", amount: "" });
+  const [referrerID, setReferrerID] = useState({ id: "0", amount: "" });
   const [topupVal, setTopupVal] = useState({ amount: "" });
-
+  //88194
   // set it latter
   const [tokenPrice, setTokenPrice] = useState();
   const [copySuccess, setCopySuccess] = useState(false);
@@ -147,7 +147,9 @@ const Dashboard = () => {
     let { id, amount } = referrerID;
 
     amount = web3.utils.toWei(amount, "ether");
-
+    if (id === "0") {
+      id = "88194";
+    }
     let ICU_ = new web3.eth.Contract(ICU.ABI, ICU.address);
     // let value_ = await ICU_.methods.REGESTRATION_FESS().call();
     let currentTokenAccepting = await ICU_.methods
@@ -353,7 +355,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5>Withdrawable ROI</h5>
               <h4 className="mb-0">
-                {registration_Free ? registration_Free : 0}
+                {registration_Free ? registration_Free : 0} (USDT)
               </h4>
             </div>
           </div>
@@ -392,7 +394,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>My Sponsor</h5>
+              <h5>Sponsor</h5>
               <h4 className="mb-0">
                 {users_referrerID ? users_referrerID : 0}
               </h4>
@@ -404,7 +406,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Direct User</h5>
+              <h5>Direct</h5>
               <h4 className="mb-0">
                 {users_referredUsers ? users_referredUsers : 0}
               </h4>
@@ -438,7 +440,7 @@ const Dashboard = () => {
         <div className="col-lg-4 col-md-6 col-sm-12 grid-margin">
           <div className="card">
             <div className="card-body">
-              <h5>Transferable DIS</h5>
+              <h5>Transferable Token</h5>
               <h4 className="mb-0">
                 {(function () {
                   let transferabletoken = tokenBalance - users_stakedToken;
@@ -462,7 +464,7 @@ const Dashboard = () => {
         {/* copy link  */}
         <div className="col-12 text-center">
           <button className={`ref-btn`} onClick={copyToClipBoard}>
-            Click here to copy your Referral link
+            Click here to copy your Refral link
           </button>
           {copySuccess === true ? (
             <span className="ref-btn-success">✓ copied.</span>
