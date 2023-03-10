@@ -355,7 +355,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5>Withdrawable ROI</h5>
               <h4 className="mb-0">
-                {registration_Free ? registration_Free : 0} (USDT)
+                {registration_Free ? registration_Free : 0} (DIS)
               </h4>
             </div>
           </div>
